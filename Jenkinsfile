@@ -1,4 +1,10 @@
 pipeline {
+    options {
+        ansiColor('xterm')
+        disableConcurrentBuilds()
+        timeout(time: 1, unit: 'HOURS')
+        timestamps()
+    }
     agent any
     stages {
         stage('Example Build') {
